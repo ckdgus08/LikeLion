@@ -6,7 +6,18 @@
     </head>
 
     <body>
-        <p>Count</p>
+        <h1>입력한 텍스트 : </h1>
+        {{ full }}
+
+        <h1>단어 카운트 : {{ total }} </h1>
+        
+        {% for word, howmany in dict %}
+        {{word}} : {{howmany}}
+        <br>
+        {% endfor%}
+
+        <br>
+       
         <a href="{% url 'home'%}">home</a>
         
     </body>
